@@ -38,7 +38,7 @@ services:
       - "8188:8188"
     container_name: "master"
   slave1:
-    image: lewuathe/hadoop-slave
+    image: asma24/hadoop-slave
     container_name: "slave1"
     depends_on:
       - master
@@ -46,21 +46,14 @@ services:
       - "9901:9864"
       - "8041:8042"
   slave2:
-    image: lewuathe/hadoop-slave
+    image: asma24/hadoop-slave
     container_name: "slave2"
     depends_on:
       - master
     ports:
       - "9902:9864"
       - "8042:8042"
-  slave3:
-    image: lewuathe/hadoop-slave
-    container_name: "slave3"
-    depends_on:
-      - master
-    ports:
-      - "9903:9864"
-      - "8043:8042"
+ 
 
 Login cluster
 
